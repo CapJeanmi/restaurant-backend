@@ -25,5 +25,6 @@ python manage.py runserver
 - Create Categorys
 - Create Products
 - Create & Edit Orders / Payments
+- Deploy to Heroku
 
 ### For inquiries: jeanm0804@gmail.com
