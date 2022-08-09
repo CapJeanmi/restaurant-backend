@@ -37,7 +37,7 @@ def get_secret(secret_name, secrets=secret):
         msg = "The field %s doesn't exists" % secret_name
         raise ImproperlyConfigured(msg)
 
-SECRET_KEY = get_secret('SECRET_KEY', default="secretKey")
+SECRET_KEY = get_secret('SECRET_KEY')
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -199,3 +199,4 @@ CORS_ALLOW_CREDENTIALS = True
 
 # Django-Heroku.
 django_heroku.settings(locals())
+
