@@ -16,6 +16,7 @@ import json
 import datetime
 import os
 import django_heroku
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).ancestor(3)
@@ -200,3 +201,5 @@ CORS_ALLOW_CREDENTIALS = True
 # Django-Heroku.
 django_heroku.settings(locals())
 
+db_from_env = dj_database_url.config(conn_max_age=500)  
+DATABASES['default'].update(db_from_env)
